@@ -1,0 +1,117 @@
+/*body tag*/
+
+/* to make extra space 0*/
+body
+{
+    margin: 0px;
+}
+
+/*star means select all*/
+*{
+    box-sizing: border-box;
+}
+.tool-img
+{
+    height: 4rem ;/*1 rem=16px*/
+}
+.toolbar-options
+{
+    display: flex;
+    gap: 1rem;
+}
+
+.toolbar
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:1rem; 
+    gap: 2rem;
+    background-color: #fff;/* White background for the toolbar */
+    border-bottom: 2px solid #e0e0e0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.tool {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3rem; /* Fixed size for the circle */
+    width: 3rem;  /* Fixed size for the circle */
+    border-radius: 50%; /* Makes the button circular */
+    background-color: #f5f5f5; /* Light background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    overflow: hidden; /* Prevents content from overflowing out of the circle */
+}
+
+/* Ensures the content (e.g., image or icon) inside the circle fits properly */
+.tool img, .tool svg {
+    max-width: 70%; /* Ensures the icon scales proportionally within the circle */
+    max-height: 70%; /* Same for height */
+    object-fit: contain; /* Ensures the icon/image keeps its aspect ratio */
+    height: 2rem;
+    width: 2rem;
+}
+
+.tool:hover {
+    background-color: #d6d6d6; /* Slightly darker on hover */
+}
+
+
+.sticky
+{
+    height: 10rem;
+    width: 6rem;
+    position: absolute;
+    left: 40vw;
+    top: 40vh;
+    
+}
+.nav
+{
+    border: 2px solid black;
+    height: 25%;
+    background-color: aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    gap:1rem;
+}
+.text-area
+{
+    height: 80%; 
+    /* % r wrt sticky */
+    width:  100%;
+}
+
+/* to make input tag invisible to provide good */
+ .input-tag
+{
+    display: none;
+}
+
+.upload-img
+{
+    height: 80%; 
+    width:  100%;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .toolbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tool {
+        height: 2.5rem;
+        width: 2.5rem;
+    }
+
+    .tool-img {
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+}
